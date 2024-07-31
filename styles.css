@@ -1,0 +1,286 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.top-nav a {
+    color: #5a67d8;
+    font-size: 1.5em;
+    margin-left: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.top-nav a:hover {
+    color: #434190;
+}
+
+header {
+    text-align: center;
+    padding: 6em 0 3em; /* Incrementar el padding superior para compensar la barra de navegación */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegurarse de que el contenido del header no se superponga con la barra de navegación */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+p {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+main {
+    padding: 2em 1em;
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.image-grid .item {
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-grid .item:hover {
+    transform: translateY(-10px);
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid h3 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: #fff;
+    background-color: #5a67d8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #434190;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.contact a {
+    color: #5a67d8;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+    color: #434190;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    color: #666;
+    position: relative; /* Cambiar a relative para evitar problemas de superposición con el contenido */
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.footer-nav a {
+    color: #5a67d8;
+    font-size: 1.5em;
+    margin-left: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+    color: #434190;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-images img:hover {
+    border: 2px solid #333;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #25D366;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-grid .item {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    header, footer {
+        padding: 1em;
+    }
+
+    .contact p, .contact .social-media a {
+        font-size: 1em;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}
